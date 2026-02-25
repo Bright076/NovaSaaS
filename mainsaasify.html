@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NovaSaaS — The Future of Work</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- ════ NAV ════ -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">NovaSaaS</div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="nav-cta">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="icon-moon">🌙</span>
+        <span class="icon-sun">☀️</span>
+      </button>
+      <a href="#" class="btn-ghost">Log in</a>
+      <a href="#" class="btn">Start free trial</a>
+    </div>
+    <button class="nav-burger" id="burgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" aria-label="Toggle theme">
+      <span class="icon-moon">🌙</span>
+      <span class="icon-sun">☀️</span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="#" style="color:var(--text);">Log in</a>
+    <a href="#" style="color:#a89aff;font-weight:600;">Start free trial →</a>
+  </div>
+</nav>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge"><span class="badge-dot"></span>Now in public beta — Try it free</div>
+    <h1>The smarter way to<br>scale your <span class="gradient-text">business</span></h1>
+    <p class="hero-sub">NovaSaaS brings your workflows, analytics, and team into one unified platform — so you can stop juggling tools and start shipping results.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn btn-lg">Start for free →</a>
+      <a href="#" class="btn-ghost" style="padding:15px 28px;border-radius:10px;font-size:0.98rem;">Watch demo ▶</a>
+    </div>
+    <p class="hero-note">No credit card required &nbsp;·&nbsp; Free for 14 days &nbsp;·&nbsp; Cancel anytime</p>
+
+    <!-- ★ ENHANCED DASHBOARD MOCKUP (A) -->
+    <div class="hero-visual">
+      <div class="dashboard-mockup">
+        <!-- Browser chrome -->
+        <div class="mockup-bar">
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <div class="mockup-url">app.NovaSaaS.io/dashboard</div>
+          <div class="mockup-nav-icons">
+            <div class="mockup-nav-icon"></div>
+            <div class="mockup-nav-icon"></div>
+          </div>
+        </div>
+        <!-- App layout -->
+        <div class="mockup-content">
+          <!-- Sidebar -->
+          <div class="mockup-sidebar">
+            <div class="sidebar-logo">NovaSaaS</div>
+            <div class="sidebar-item active"><div class="sidebar-icon" style="background:#7c6bff;opacity:1;"></div>Dashboard</div>
+            <div class="sidebar-item"><div class="sidebar-icon"></div>Analytics</div>
+            <div class="sidebar-item"><div class="sidebar-icon"></div>Projects</div>
+            <div class="sidebar-item"><div class="sidebar-icon"></div>Customers</div>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-item"><div class="sidebar-icon"></div>Team</div>
+            <div class="sidebar-item"><div class="sidebar-icon"></div>Reports</div>
+            <div class="sidebar-item"><div class="sidebar-icon"></div>Settings</div>
+          </div>
+          <!-- Main content -->
+          <div class="mockup-main">
+            <div class="mockup-header-row">
+              <div class="mockup-title">Good morning, Alex ✨</div>
+              <div class="mockup-actions">
+                <div class="mockup-btn mockup-btn-ghost">Feb 2026 ▾</div>
+                <div class="mockup-btn mockup-btn-primary">+ New Report</div>
+              </div>
+            </div>
+            <!-- 4 stat cards -->
+            <div class="mockup-stats" id="mockupStats">
+              <div class="mockup-stat"><div class="ms-label">Total Revenue</div><div class="ms-value">$84,201</div><div class="ms-badge ms-up">▲ 12.4%</div></div>
+              <div class="mockup-stat"><div class="ms-label">Active Users</div><div class="ms-value">9,341</div><div class="ms-badge ms-up">▲ 5.8%</div></div>
+              <div class="mockup-stat"><div class="ms-label">Conversion</div><div class="ms-value">3.67%</div><div class="ms-badge ms-up">▲ 0.4%</div></div>
+              <div class="mockup-stat"><div class="ms-label">Churn Rate</div><div class="ms-value">1.2%</div><div class="ms-badge ms-down">▼ 0.3%</div></div>
+            </div>
+            <!-- Charts row -->
+            <div class="mockup-charts">
+              <div class="mockup-chart-box">
+                <div class="mcb-title">Revenue Trend</div>
+                <div class="bar-chart" id="barChart"></div>
+              </div>
+              <div class="mockup-chart-box">
+                <div class="mcb-title">User Growth</div>
+                <div class="line-chart">
+                  <svg viewBox="0 0 200 80" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#7c6bff" stop-opacity="0.3"/>
+                        <stop offset="100%" stop-color="#7c6bff" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,70 C20,65 40,50 60,42 C80,34 100,30 120,22 C140,14 160,10 180,5 L200,3 L200,80 L0,80 Z" fill="url(#lg1)"/>
+                    <path d="M0,70 C20,65 40,50 60,42 C80,34 100,30 120,22 C140,14 160,10 180,5 L200,3" fill="none" stroke="#7c6bff" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="200" cy="3" r="3" fill="#e040fb"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- Recent activity -->
+            <div class="mockup-activity">
+              <div class="activity-row"><div class="activity-dot" style="background:#4ade80;"></div><div class="activity-text">New user signup — jamie@acme.com</div><div class="activity-time">2m ago</div></div>
+              <div class="activity-row"><div class="activity-dot" style="background:#7c6bff;"></div><div class="activity-text">Payment received — Pro Plan $29</div><div class="activity-time">8m ago</div></div>
+              <div class="activity-row"><div class="activity-dot" style="background:#fbbf24;"></div><div class="activity-text">Report generated — Q1 Summary</div><div class="activity-time">14m ago</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ SOCIAL PROOF (D) ════ -->
+<section class="social-proof-section">
+  <div class="container">
+    <div class="social-proof-inner">
+      <div style="text-align:center;">
+        <div class="sp-stars">★★★★★</div>
+        <div style="font-size:0.78rem;color:var(--muted);margin-top:4px;">Rated 4.9 / 5</div>
+      </div>
+      <div class="sp-divider"></div>
+      <div class="sp-stat"><strong>5,000+</strong><span>Founders worldwide</span></div>
+      <div class="sp-divider"></div>
+      <div class="sp-stat"><strong>$1.2B</strong><span>Revenue tracked</span></div>
+      <div class="sp-divider"></div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="sp-avatars">
+          <div class="sp-avatar" style="background:linear-gradient(135deg,#7c6bff,#e040fb);">AS</div>
+          <div class="sp-avatar" style="background:linear-gradient(135deg,#00e5ff,#7c6bff);">JR</div>
+          <div class="sp-avatar" style="background:linear-gradient(135deg,#e040fb,#ff6b6b);">MK</div>
+          <div class="sp-avatar" style="background:linear-gradient(135deg,#4ade80,#00e5ff);">TL</div>
+          <div class="sp-avatar" style="background:linear-gradient(135deg,#fbbf24,#e040fb);">+</div>
+        </div>
+        <div class="sp-text"><strong>Join 5,000+</strong> founders already scaling with NovaSaaS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <!-- ════ TRUSTED BY (E) ════ -->
+  <section class="logos-section">
+    <p class="logos-label">Trusted by teams at world-class companies</p>
+    <div class="logos-row">
+      <span class="logo-item">TechCorp</span>
+      <span class="logo-item">StartupX</span>
+      <span class="logo-item">Cloudify</span>
+      <span class="logo-item">Nexus&nbsp;AI</span>
+      <span class="logo-item">Veritas</span>
+      <span class="logo-item">Launchpad</span>
+    </div>
+  </section>
+
+  <!-- ════ FEATURES ════ -->
+  <section id="features" class="features-section">
+    <div class="features-header reveal">
+      <p class="section-label">Features</p>
+      <h2 class="section-title">Everything your team needs, nothing it doesn't</h2>
+      <p class="section-sub">Powerful tools built for modern teams. No duct tape, no tab overload — just one platform that actually works.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card large reveal">
+        <div class="feature-text">
+          <div class="feature-icon">📊</div>
+          <h3>Real-time Analytics</h3>
+          <p>Live views of your revenue, churn, conversion, and engagement — updated the moment data comes in, not hours later.</p>
+        </div>
+        <div class="feature-visual">
+          <div style="flex:1;background:linear-gradient(180deg,#7c6bff,rgba(124,107,255,0.2));border-radius:3px 3px 0 0;height:40%;"></div>
+          <div style="flex:1;background:linear-gradient(180deg,#7c6bff,rgba(124,107,255,0.2));border-radius:3px 3px 0 0;height:65%;"></div>
+          <div style="flex:1;background:linear-gradient(180deg,#7c6bff,rgba(124,107,255,0.2));border-radius:3px 3px 0 0;height:50%;"></div>
+          <div style="flex:1;background:linear-gradient(180deg,#e040fb,rgba(224,64,251,0.2));border-radius:3px 3px 0 0;height:85%;"></div>
+          <div style="flex:1;background:linear-gradient(180deg,#e040fb,rgba(224,64,251,0.2));border-radius:3px 3px 0 0;height:70%;"></div>
+          <div style="flex:1;background:linear-gradient(180deg,#00e5ff,rgba(0,229,255,0.2));border-radius:3px 3px 0 0;height:95%;"></div>
+        </div>
+      </div>
+      <div class="feature-card reveal reveal-delay-1"><div class="feature-icon">⚡</div><h3>Blazing Fast</h3><p>Edge infrastructure delivers sub-50ms response times globally. Your users won't notice the load.</p></div>
+      <div class="feature-card reveal reveal-delay-2"><div class="feature-icon">🔒</div><h3>Enterprise Security</h3><p>SOC 2 Type II, end-to-end encryption, SSO, and granular role-based access controls built in.</p></div>
+      <div class="feature-card reveal"><div class="feature-icon">🤖</div><h3>AI Automation</h3><p>Let AI handle the repetitive work — categorizing leads, writing reports, scheduling tasks automatically.</p></div>
+      <div class="feature-card reveal reveal-delay-1"><div class="feature-icon">🔗</div><h3>200+ Integrations</h3><p>Connect with Slack, Salesforce, HubSpot, Jira, Zapier, and hundreds more out of the box.</p></div>
+      <div class="feature-card reveal reveal-delay-2"><div class="feature-icon">👥</div><h3>Team Collaboration</h3><p>Comments, mentions, shared dashboards, and live cursors so your whole team stays aligned.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ════ HOW IT WORKS ════ -->
+<section id="how-it-works" class="how-section">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-label">How it works</p>
+      <h2 class="section-title">Up and running in under an hour</h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal"><div class="step-num">1</div><h3>Connect your tools</h3><p>Link your existing apps and data sources in one click. No engineering required, no migration headaches.</p></div>
+      <div class="step reveal reveal-delay-1"><div class="step-num">2</div><h3>Configure your workspace</h3><p>Customize dashboards, automations, and team permissions to perfectly match your workflow.</p></div>
+      <div class="step reveal reveal-delay-2"><div class="step-num">3</div><h3>Scale with confidence</h3><p>Monitor, optimize, and grow — with AI surfacing the right opportunities at the right time.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <!-- ════ STATS ════ -->
+  <section class="stats-section">
+    <div class="reveal"><p class="section-label">By the numbers</p><h2 class="section-title">Results that speak for themselves</h2></div>
+    <div class="stats-row">
+      <div class="big-stat reveal"><div class="number">40K+</div><div class="label">Teams worldwide</div></div>
+      <div class="big-stat reveal reveal-delay-1"><div class="number">99.9%</div><div class="label">Uptime SLA</div></div>
+      <div class="big-stat reveal reveal-delay-2"><div class="number">$1.2B</div><div class="label">Revenue tracked</div></div>
+      <div class="big-stat reveal reveal-delay-3"><div class="number">4.9★</div><div class="label">Average rating</div></div>
+    </div>
+  </section>
+
+  <!-- ════ TESTIMONIALS ════ -->
+  <section class="testimonials-section">
+    <div class="reveal"><p class="section-label">Testimonials</p><h2 class="section-title">Loved by founders and teams everywhere</h2></div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"NovaSaaS replaced five different tools for us. Our team actually uses one dashboard instead of juggling tabs. The time savings alone paid for itself in week one."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#7c6bff,#e040fb);">AS</div>
+          <div class="author-info"><div class="name">Aria Singh</div><div class="role">Head of Operations, Vertex</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The analytics feature alone is worth the price. We caught a conversion issue I'd been blind to for months — fixed the same afternoon. Revenue went up 18%."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#00e5ff,#7c6bff);">JR</div>
+          <div class="author-info"><div class="name">James Rivera</div><div class="role">Founder, Sparrow Labs</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Onboarding took under an hour. The Slack and Salesforce integrations just worked. Our sales team was fully aboard in two days — and that never happens."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:linear-gradient(135deg,#e040fb,#ff6b6b);">MK</div>
+          <div class="author-info"><div class="name">Maya Kowalski</div><div class="role">VP Sales, Trellis</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ════ PRICING ════ -->
+<section id="pricing" class="pricing-section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <p class="section-label">Pricing</p>
+      <h2 class="section-title">Simple, transparent pricing</h2>
+      <p style="color:var(--muted);margin-top:12px;font-size:0.95rem;font-weight:300;">Start free. Scale as you grow. No hidden fees, ever.</p>
+    </div>
+    <div class="pricing-toggle">
+      <span class="toggle-label active" id="labelMonthly">Monthly</span>
+      <div class="toggle-switch" id="billingToggle"></div>
+      <span class="toggle-label" id="labelAnnual">Annual <span class="save-badge">Save 20%</span></span>
+    </div>
+    <div class="pricing-cards">
+      <div class="price-card reveal">
+        <div class="plan-name">Starter</div>
+        <div class="plan-desc">For indie makers and solo teams just getting started.</div>
+        <div class="plan-price"><span class="amount" data-monthly="$9" data-annual="$7">$9</span><span class="period">/mo</span></div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span> Up to 3 team members</li>
+          <li><span class="check">✓</span> 5 integrations</li>
+          <li><span class="check">✓</span> 10GB storage</li>
+          <li><span class="check">✓</span> Email support</li>
+          <li><span class="cross">✗</span><span style="opacity:0.4;">AI automation</span></li>
+          <li><span class="cross">✗</span><span style="opacity:0.4;">Advanced analytics</span></li>
+        </ul>
+        <button class="btn-outline">Get started free</button>
+      </div>
+      <div class="price-card featured reveal reveal-delay-1">
+        <div class="popular-badge">Most Popular</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-desc">For growing teams that need the full feature set.</div>
+        <div class="plan-price"><span class="amount" data-monthly="$29" data-annual="$23">$29</span><span class="period">/mo</span></div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span> Unlimited team members</li>
+          <li><span class="check">✓</span> 50+ integrations</li>
+          <li><span class="check">✓</span> 100GB storage</li>
+          <li><span class="check">✓</span> Priority support</li>
+          <li><span class="check">✓</span> AI automation</li>
+          <li><span class="check">✓</span> Advanced analytics</li>
+        </ul>
+        <a href="#" class="btn btn-full">Start 14-day trial →</a>
+      </div>
+      <div class="price-card reveal reveal-delay-2">
+        <div class="plan-name">Enterprise</div>
+        <div class="plan-desc">For large orgs with security, compliance, and custom needs.</div>
+        <div class="plan-price"><span class="amount" data-monthly="Custom" data-annual="Custom">Custom</span></div>
+        <ul class="plan-features">
+          <li><span class="check">✓</span> Everything in Pro</li>
+          <li><span class="check">✓</span> Unlimited integrations</li>
+          <li><span class="check">✓</span> Unlimited storage</li>
+          <li><span class="check">✓</span> Dedicated success manager</li>
+          <li><span class="check">✓</span> 99.9% SLA guarantee</li>
+          <li><span class="check">✓</span> SSO & custom contracts</li>
+        </ul>
+        <button class="btn-outline">Contact sales</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <!-- ════ FAQ ════ -->
+  <section id="faq" class="faq-section">
+    <div class="reveal"><p class="section-label">FAQ</p><h2 class="section-title">Questions, answered</h2></div>
+    <div class="faq-grid">
+      <div class="faq-item reveal"><button class="faq-question">Do I need a credit card to sign up?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">No. Your 14-day free trial starts the moment you create an account — no payment info needed until you decide to upgrade.</div></div></div>
+      <div class="faq-item reveal reveal-delay-1"><button class="faq-question">Can I change plans later?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Yes, upgrade, downgrade, or cancel anytime. Upgrades take effect immediately; downgrades apply at end of your billing cycle.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">How does data migration work?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">One-click import from most popular platforms. Our onboarding team helps with large dataset migrations at no extra cost on Pro and Enterprise plans.</div></div></div>
+      <div class="faq-item reveal reveal-delay-1"><button class="faq-question">Is there a discount for non-profits?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Yes — qualifying non-profits and educational institutions receive a 50% discount. Contact our team with your details to apply.</div></div></div>
+      <div class="faq-item reveal"><button class="faq-question">Where is my data stored?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Data is stored in SOC 2 certified data centers in the US and EU. Enterprise customers can configure preferred region and data residency policies.</div></div></div>
+      <div class="faq-item reveal reveal-delay-1"><button class="faq-question">What support channels are available?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Starter: email with 24hr SLA. Pro: priority support, 4hr SLA, live chat. Enterprise: dedicated success manager + 99.9% uptime SLA.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ════ CTA ════ -->
+  <section class="cta-section">
+    <div class="cta-box reveal">
+      <h2>Ready to transform how your team works?</h2>
+      <p>Join 40,000+ teams already using NovaSaaS to move faster and grow smarter.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-lg">Start for free →</a>
+        <a href="#" class="btn-ghost" style="padding:15px 28px;border-radius:10px;font-size:0.98rem;">Talk to sales</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ════ FOOTER ════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-footer">NovaSaaS</div>
+        <p>The all-in-one platform to manage, scale, and automate your business workflows.</p>
+      </div>
+      <div class="footer-col"><h4>Product</h4><ul><li><a href="#">Features</a></li><li><a href="#">Pricing</a></li><li><a href="#">Changelog</a></li><li><a href="#">Roadmap</a></li><li><a href="#">Status</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Blog</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Resources</h4><ul><li><a href="#">Documentation</a></li><li><a href="#">API Reference</a></li><li><a href="#">Integrations</a></li><li><a href="#">Community</a></li><li><a href="#">Support</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NovaSaaS, Inc. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+<script src="./script/script.js"></script>
+</body>
+</html>
